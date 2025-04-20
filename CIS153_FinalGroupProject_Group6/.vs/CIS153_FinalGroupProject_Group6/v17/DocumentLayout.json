@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|c:\\users\\grang\\onedrive\\documents\\github\\cis153_finalproject\\cis153_finalgroupproject_group6\\cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|c:\\users\\grang\\onedrive\\documents\\github\\cis153_finalproject\\cis153_finalgroupproject_group6\\cis153_finalgroupproject_group6\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -44,45 +44,45 @@
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\Cell.cs",
               "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Cell.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\Cell.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T20:50:27.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Board.cs",
               "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Board.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\Board.cs",
               "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Board.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\Board.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T21:00:03.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TwoPlayer.cs",
               "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
-              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs*",
-              "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\TwoPlayer.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAAA0AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
+              "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAswF4BAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T20:50:00.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TwoPlayer.cs [Design]",
               "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
-              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs [Design]*",
-              "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\TwoPlayer.cs [Design]*",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs [Design]",
+              "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\TwoPlayer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T20:40:47.511Z",
               "EditorCaption": " [Design]"
@@ -95,7 +95,7 @@
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\MainMenu.cs",
               "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\MainMenu.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\MainMenu.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAawBgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAawBEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T20:44:38.609Z",
               "EditorCaption": ""

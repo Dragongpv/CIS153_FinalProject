@@ -15,7 +15,7 @@ namespace CIS153_FinalGroupProject_Group6
         public form_mainMenu()
         {
             InitializeComponent();
-            Console.WriteLine("test1");
+            //Console.WriteLine("test1");
         }
 
         public void loadTwoPlayerForm()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CIS153_FinalGroupProject_Group6
 {
@@ -14,10 +15,12 @@ namespace CIS153_FinalGroupProject_Group6
         //private int y;
         //0 will be empty, 1 will be red, 2 will be yellow
         private int state;
+        private Button button;
 
         public Cell()
         {
             state = 0;
+
         }
         //public Cell(int xCord, int yCord)
         //{
@@ -29,17 +32,14 @@ namespace CIS153_FinalGroupProject_Group6
 
 
         //getters
-        //public int getX()
-        //{
-        //    return x;
-        //}
-        //public int getY()
-        //{
-        //    return y;
-        //}
+
         public int getState()
         {
             return state;
+        }
+        public Button getButton()
+        {
+            return button;
         }
 
         //setters
@@ -47,6 +47,10 @@ namespace CIS153_FinalGroupProject_Group6
         {
             //ns being "new state"
             state = ns;
+        }
+        public void setButton(Button b)
+        {
+            button = b;
         }
 
     }

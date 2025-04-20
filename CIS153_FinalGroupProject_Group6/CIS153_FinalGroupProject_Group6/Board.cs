@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CIS153_FinalGroupProject_Group6
 {
@@ -21,7 +22,9 @@ namespace CIS153_FinalGroupProject_Group6
             {
                 for (int yi = 0; yi < 6; yi++)
                 {
+
                     board[xi, yi] = new Cell();
+                    
                 }
 
 
