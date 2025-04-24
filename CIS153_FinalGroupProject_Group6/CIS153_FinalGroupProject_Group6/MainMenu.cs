@@ -24,13 +24,35 @@ namespace CIS153_FinalGroupProject_Group6
             form_twoPlayer TPForm = new form_twoPlayer();
             TPForm.Show();
             this.Hide();
-
-
         }
 
         private void btn_TwoPlayer_Click(object sender, EventArgs e)
         {
             loadTwoPlayerForm();
+        }
+
+        private void loadSinglePlayerForm()
+        {
+            form_singleplayer SPForm = new form_singleplayer();
+            SPForm.Show();
+            this.Hide();
+        }
+
+        private void btn_singleplayer_Click(object sender, EventArgs e)
+        {
+            loadSinglePlayerForm();
+        }
+        
+        private void loadStatsForm()
+        {
+            form_stats statsForm = new form_stats();
+            statsForm.Show();
+            this.Hide();
+        }
+
+        private void btn_stats_Click(object sender, EventArgs e)
+        {
+            loadStatsForm();
         }
     }
 

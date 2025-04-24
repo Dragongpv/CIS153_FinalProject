@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,31 +10,22 @@ using System.Windows.Forms;
 
 namespace CIS153_FinalGroupProject_Group6
 {
-    public partial class form_twoPlayer: Form
+    public partial class form_singleplayer: Form
     {
         int playerTurn = 1; //1 is player one being red and 2 is player 2/AI being yellow
         int turnsTaken = 0; //keeps track of how many turns have been taken
         Board board = new Board();
         bool win = false;
 
-        public form_twoPlayer()
+        public form_singleplayer()
         {
             InitializeComponent();
-
-
-            //testing tag as a way to get position
-            //Console.WriteLine("testttttttt");
-            // Console.WriteLine(btn_00.Tag);
-
-            //Console.WriteLine(btn_00.Tag.ToString()[0]);
-            // Console.WriteLine(btn_00.Tag.ToString()[1]);
-            //Console.WriteLine(btn_00.Tag.ToString()[2]);
         }
+    
 
-        //func called when button is clicked
-        private void Button_Click(object sender, EventArgs e)
-        {
-            if(!win)
+       private void Button_Click(object sender, EventArgs e)
+       {
+            if (!win)
             {
                 //store the sender (button that was clicked) as clicked button
                 Button clickedButton = sender as Button;
@@ -60,7 +50,7 @@ namespace CIS153_FinalGroupProject_Group6
                     }
                 }
             }
-        }
+       }
 
         private void checkFall(int xCord, int yCord, Button clickedButton)
         {
@@ -70,7 +60,7 @@ namespace CIS153_FinalGroupProject_Group6
             for (int i = yCord; i < 6; i++)
             {
 
-                if(board.getCell(xCord, i).getState() == 0)
+                if (board.getCell(xCord, i).getState() == 0)
                 {
                     //sets y cord equal to i, that being the y value of the lower cell
                     yCord = i;
@@ -342,7 +332,7 @@ namespace CIS153_FinalGroupProject_Group6
             }
 
             //if it is player 2's turn
-            if(playerTurn == 2)
+            if (playerTurn == 2)
             {
                 //left
                 inRow = 0;
@@ -548,7 +538,7 @@ namespace CIS153_FinalGroupProject_Group6
                 }
 
             }
-            
+
         }
 
         private void mouseHover(object sender, EventArgs e)
@@ -580,6 +570,5 @@ namespace CIS153_FinalGroupProject_Group6
             }
         }
     }
-
 
 }
