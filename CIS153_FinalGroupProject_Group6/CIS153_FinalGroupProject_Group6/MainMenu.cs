@@ -32,6 +32,11 @@ namespace CIS153_FinalGroupProject_Group6
         {
             loadTwoPlayerForm();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
