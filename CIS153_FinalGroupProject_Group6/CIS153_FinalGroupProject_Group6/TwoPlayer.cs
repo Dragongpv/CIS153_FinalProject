@@ -22,7 +22,7 @@ namespace CIS153_FinalGroupProject_Group6
         {
             InitializeComponent();
 
-
+            setColors();
             //testing tag as a way to get position
             //Console.WriteLine("testttttttt");
             // Console.WriteLine(btn_00.Tag);
@@ -37,6 +37,7 @@ namespace CIS153_FinalGroupProject_Group6
         {
             if(!win)
             {
+                setColors();
                 //store the sender (button that was clicked) as clicked button
                 Button clickedButton = sender as Button;
                 if (clickedButton != null)
@@ -89,8 +90,7 @@ namespace CIS153_FinalGroupProject_Group6
             //player 1 turn
             if (playerTurn == 1)
             {
-                //set color
-                fallButton.BackColor = Color.Red;
+
                 //set state to full/red (1)
                 board.getCell(xCord, yCord).setState(1);
                 //check for win
@@ -103,8 +103,7 @@ namespace CIS153_FinalGroupProject_Group6
             //player 2 or AI turn
             else
             {
-                //set color
-                fallButton.BackColor = Color.Yellow;
+
                 //set state to full/yellow (2)
                 board.getCell(xCord, yCord).setState(2);
                 //check for win
@@ -573,13 +572,39 @@ namespace CIS153_FinalGroupProject_Group6
 
         private void mouseLeave(object sender, EventArgs e)
         {
-            Button hoveredButton = sender as Button;
-            if (hoveredButton != null)
+            setColors();
+        }
+
+        private void setColors()
+        {
+            //cycles through cells
+            for (int i = 0; i < 7; i++)
             {
-                hoveredButton.BackColor = SystemColors.Control;
+                for (int j = 0; j < 6; j++)
+                {
+                    //finds name of cells
+                    string tempName = "btn_" + i.ToString() + j.ToString();
+                    //finds the button with the corresponding cell name
+                    Button tempButton = this.Controls.Find(tempName, true).FirstOrDefault() as Button;
+                    //sets the button to the correct color depending on the stored state
+                    if (board.getCell(i, j).getState() == 1)
+                    {
+                        tempButton.BackColor = Color.Red;
+                    }
+                    else if (board.getCell(i, j).getState() == 2)
+                    {
+                        tempButton.BackColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        tempButton.BackColor = Color.FloralWhite;
+                    }
+                }
             }
         }
     }
+
+
 
 
 }
