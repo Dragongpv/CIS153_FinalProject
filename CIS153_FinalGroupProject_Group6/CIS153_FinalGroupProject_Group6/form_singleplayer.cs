@@ -52,9 +52,113 @@ namespace CIS153_FinalGroupProject_Group6
                         checkFall(x, y, clickedButton);
                     }
 
+                    if (!win)
+                    {
+                        aiLogic();
+                    }
                 }
             }
        }
+
+
+        private void aiTurn(int xCord, int yCord)
+        {
+            //check if space below is empty, fall to bottom most space
+
+            //loop thru going down, until y is 5 (lowest cell)
+            for (int i = yCord; i < 6; i++)
+            {
+
+                if (board.getCell(xCord, i).getState() == 0)
+                {
+                    //sets y cord equal to i, that being the y value of the lower cell
+                    yCord = i;
+                    //Console.WriteLine("yCord is now : " + yCord);
+                }
+            }
+
+            //sets color and rotates player turn
+            //player 1 turn
+            if (playerTurn == 1)
+            {
+                //set color
+                //fallButton.BackColor = Color.Red;
+                //set state to full/red (1)
+                board.getCell(xCord, yCord).setState(1);
+                //check for win
+                checkWin(xCord, yCord);
+
+                //change turn
+                playerTurn = 2;
+                turnsTaken++;
+            }
+            //player 2 or AI turn
+            else
+            {
+                //set color
+                //fallButton.BackColor = Color.Yellow;
+                //set state to full/yellow (2)
+                board.getCell(xCord, yCord).setState(2);
+                //check for win
+                checkWin(xCord, yCord);
+
+                //change turn
+                playerTurn = 1;
+                turnsTaken++;
+            }
+            //showing state 1 is red, 2 is yellow, 0 is empty
+            //Console.WriteLine("cell state at" + xCord + yCord + board.getCell(xCord, yCord).getState());
+
+            //check if max amount of turns has been taken 
+            //Console.WriteLine("turns taken : " + turnsTaken);
+
+            if (turnsTaken >= 42)
+            {
+                //this is where the game over scenario will go 
+                Console.WriteLine("Game Over");
+            }
+        }
+
+        private void aiLogic()
+        {
+            //variable used to chose the x value of the spot to be played
+            int aiChoice;
+            //this is the logic for where it will play on the starting turn
+            if (turnsTaken == 1)
+            {
+                //plays in the middle unless the first player played there
+                aiChoice = 3;
+                //if they played in the middle the ai will play one to the right
+                if (board.getCell(aiChoice, 5).getState() == 1)
+                {
+                    aiChoice++;
+
+                }
+            }
+            //this is the logic for every other turn but the first one
+            else
+            {
+                //sets variable in this scope
+                aiChoice = 3;
+                //if the top cell is filled it plays the cell to the right
+                while (board.getCell(aiChoice, 0).getState() != 0)
+                {
+                    aiChoice++;
+                    if (aiChoice > 6)
+                    {
+                        aiChoice = 0;
+                    }
+                }
+            }
+
+            //this is the code that actually sets the state of the correct cell
+            if (board.getCell(aiChoice, 0).getState() == 0)
+            {
+
+                aiTurn(aiChoice, 0);
+            }
+            
+        }
 
         private void checkFall(int xCord, int yCord, Button clickedButton)
         {
