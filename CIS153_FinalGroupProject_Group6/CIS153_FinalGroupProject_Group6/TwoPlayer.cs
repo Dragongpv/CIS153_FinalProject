@@ -17,11 +17,12 @@ namespace CIS153_FinalGroupProject_Group6
         int turnsTaken = 0; //keeps track of how many turns have been taken
         Board board = new Board();
         bool win = false;
+        int playerwin = 0; //1 will be player 1 and 2 will be player 2
 
         public form_twoPlayer()
         {
             InitializeComponent();
-
+            this.StartPosition = FormStartPosition.CenterScreen;
             setColors();
             //testing tag as a way to get position
             //Console.WriteLine("testttttttt");
@@ -98,6 +99,7 @@ namespace CIS153_FinalGroupProject_Group6
 
                 //change turn
                 playerTurn = 2;
+                lbl_turn.Text = "Player 2's Turn";
                 turnsTaken++;
             }
             //player 2 or AI turn
@@ -111,6 +113,7 @@ namespace CIS153_FinalGroupProject_Group6
 
                 //change turn
                 playerTurn = 1;
+                lbl_turn.Text = "Player 1's Turn";
                 turnsTaken++;
             }
             //showing state 1 is red, 2 is yellow, 0 is empty
@@ -335,8 +338,11 @@ namespace CIS153_FinalGroupProject_Group6
 
                 if (win)
                 {
-                    //win condition goes here
+                    playerwin = 1;
                     Console.WriteLine("Player 1 wins!");
+                    form_gameOver go = new form_gameOver(playerwin, this);
+                    go.Show();
+                    this.Hide();
                 }
             }
 
@@ -542,8 +548,11 @@ namespace CIS153_FinalGroupProject_Group6
 
                 if (win)
                 {
-                    //win condition goes here
+                    playerwin = 2;
                     Console.WriteLine("Player 2 wins!");
+                    form_gameOver go = new form_gameOver(playerwin, this);
+                    go.Show();
+                    this.Hide();
                 }
 
             }
@@ -555,7 +564,7 @@ namespace CIS153_FinalGroupProject_Group6
             if(!win)
             {
                 Button hoveredButton = sender as Button;
-                if (hoveredButton != null)
+                if (hoveredButton != null && hoveredButton.BackColor != Color.Red && hoveredButton.BackColor != Color.Yellow)
                 {
                     if (playerTurn == 1)
                     {
@@ -600,6 +609,14 @@ namespace CIS153_FinalGroupProject_Group6
                         tempButton.BackColor = Color.FloralWhite;
                     }
                 }
+            }
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms.Cast<Form>().ToArray())
+            {
+                form.Close();
             }
         }
     }

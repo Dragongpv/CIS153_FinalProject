@@ -16,11 +16,12 @@ namespace CIS153_FinalGroupProject_Group6
         int turnsTaken = 0; //keeps track of how many turns have been taken
         Board board = new Board();
         bool win = false;
+        int playerwin = 0; //keeps track of which player won
 
         public form_singleplayer()
         {
             InitializeComponent();
-
+            this.StartPosition = FormStartPosition.CenterScreen;
             setColors();
         }
     
@@ -434,8 +435,11 @@ namespace CIS153_FinalGroupProject_Group6
 
                 if (win)
                 {
-                    //win condition goes here
+                    playerwin = 1;
                     Console.WriteLine("Player 1 wins!");
+                    form_gameOver go = new form_gameOver(playerwin, this);
+                    go.Show();
+                    this.Hide();
                 }
             }
 
@@ -641,8 +645,11 @@ namespace CIS153_FinalGroupProject_Group6
 
                 if (win)
                 {
-                    //win condition goes here
+                    playerwin = 2;
                     Console.WriteLine("Player 2 wins!");
+                    form_gameOver go = new form_gameOver(playerwin, this);
+                    go.Show();
+                    this.Hide();
                 }
 
             }
@@ -654,7 +661,7 @@ namespace CIS153_FinalGroupProject_Group6
             if(!win)
             {
                 Button hoveredButton = sender as Button;
-                if (hoveredButton != null)
+                if (hoveredButton != null && hoveredButton.BackColor != Color.Red && hoveredButton.BackColor != Color.Yellow)
                 {
                     if (playerTurn == 1)
                     {
@@ -701,6 +708,19 @@ namespace CIS153_FinalGroupProject_Group6
                     }
                 }
             }
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms.Cast<Form>().ToArray())
+            {
+                form.Close();
+            }
+        }
+
+        private void lbl_turn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

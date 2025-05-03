@@ -15,6 +15,7 @@ namespace CIS153_FinalGroupProject_Group6
         public form_stats()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }
