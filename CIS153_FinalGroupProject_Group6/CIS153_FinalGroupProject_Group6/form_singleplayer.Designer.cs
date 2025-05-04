@@ -70,6 +70,8 @@
             this.btn_20 = new System.Windows.Forms.Button();
             this.btn_10 = new System.Windows.Forms.Button();
             this.btn_00 = new System.Windows.Forms.Button();
+            this.lbl_turn = new System.Windows.Forms.Label();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_65
@@ -662,12 +664,36 @@
             this.btn_00.MouseLeave += new System.EventHandler(this.mouseLeave);
             this.btn_00.MouseHover += new System.EventHandler(this.mouseHover);
             // 
+            // lbl_turn
+            // 
+            this.lbl_turn.AutoSize = true;
+            this.lbl_turn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lbl_turn.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_turn.Location = new System.Drawing.Point(681, 12);
+            this.lbl_turn.Name = "lbl_turn";
+            this.lbl_turn.Size = new System.Drawing.Size(143, 25);
+            this.lbl_turn.TabIndex = 89;
+            this.lbl_turn.Text = "Player 1\'s Turn";
+            this.lbl_turn.Click += new System.EventHandler(this.lbl_turn_Click);
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.Location = new System.Drawing.Point(677, 505);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(147, 41);
+            this.btn_exit.TabIndex = 90;
+            this.btn_exit.Text = "EXIT";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
             // form_singleplayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(682, 559);
+            this.ClientSize = new System.Drawing.Size(832, 559);
+            this.Controls.Add(this.btn_exit);
+            this.Controls.Add(this.lbl_turn);
             this.Controls.Add(this.btn_65);
             this.Controls.Add(this.btn_55);
             this.Controls.Add(this.btn_45);
@@ -713,6 +739,7 @@
             this.Name = "form_singleplayer";
             this.Text = "form_singleplayer";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -760,5 +787,7 @@
         private System.Windows.Forms.Button btn_20;
         private System.Windows.Forms.Button btn_10;
         private System.Windows.Forms.Button btn_00;
+        private System.Windows.Forms.Label lbl_turn;
+        private System.Windows.Forms.Button btn_exit;
     }
 }

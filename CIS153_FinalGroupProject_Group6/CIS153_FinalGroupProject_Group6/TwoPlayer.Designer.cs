@@ -76,6 +76,8 @@
             this.btn_25 = new System.Windows.Forms.Button();
             this.btn_15 = new System.Windows.Forms.Button();
             this.btn_05 = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.lbl_turn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_00
@@ -656,12 +658,39 @@
             this.btn_05.UseVisualStyleBackColor = false;
             this.btn_05.Click += new System.EventHandler(this.Button_Click);
             // 
+            // btn_exit
+            // 
+            this.btn_exit.Location = new System.Drawing.Point(696, 499);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(147, 41);
+            this.btn_exit.TabIndex = 92;
+            this.btn_exit.Text = "EXIT";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
+            // lbl_turn
+            // 
+            this.lbl_turn.AutoSize = true;
+            this.lbl_turn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lbl_turn.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_turn.Location = new System.Drawing.Point(684, 11);
+            this.lbl_turn.Name = "lbl_turn";
+            this.lbl_turn.Size = new System.Drawing.Size(0, 25);
+            this.lbl_turn.TabIndex = 91;
+            // 
             // form_twoPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(678, 552);
+=======
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(874, 552);
+            this.Controls.Add(this.btn_exit);
+            this.Controls.Add(this.lbl_turn);
+>>>>>>> c260ee2e4576bce661596ad60b929132b03aa44e
             this.Controls.Add(this.btn_75);
             this.Controls.Add(this.btn_65);
             this.Controls.Add(this.btn_55);
@@ -713,6 +742,7 @@
             this.Name = "form_twoPlayer";
             this.Text = "TwoPlayer";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -766,5 +796,7 @@
         private System.Windows.Forms.Button btn_25;
         private System.Windows.Forms.Button btn_15;
         private System.Windows.Forms.Button btn_05;
+        private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Label lbl_turn;
     }
 }

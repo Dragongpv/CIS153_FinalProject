@@ -15,6 +15,7 @@ namespace CIS153_FinalGroupProject_Group6
         public form_mainMenu()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             //Console.WriteLine("test1");
         }
 
@@ -53,6 +54,14 @@ namespace CIS153_FinalGroupProject_Group6
         private void btn_stats_Click(object sender, EventArgs e)
         {
             loadStatsForm();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms.Cast<Form>().ToArray())
+            {
+                form.Close();
+            }
         }
     }
 

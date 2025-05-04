@@ -17,12 +17,13 @@ namespace CIS153_FinalGroupProject_Group6
         int turnsTaken = 0; //keeps track of how many turns have been taken
         Board board = new Board();
         bool win = false;
+        int playerwin = 0; //1 will be player 1 and 2 will be player 2
 
         public form_twoPlayer()
         {
             InitializeComponent();
-
-
+            this.StartPosition = FormStartPosition.CenterScreen;
+            setColors();
             //testing tag as a way to get position
             //Console.WriteLine("testttttttt");
             // Console.WriteLine(btn_00.Tag);
@@ -37,6 +38,7 @@ namespace CIS153_FinalGroupProject_Group6
         {
             if(!win)
             {
+                setColors();
                 //store the sender (button that was clicked) as clicked button
                 Button clickedButton = sender as Button;
                 if (clickedButton != null)
@@ -53,10 +55,14 @@ namespace CIS153_FinalGroupProject_Group6
                     //Console.WriteLine(y);
 
                     //check that cell is empty at position
-                    if (board.getCell(x, y).getState() == 0)
+                    if (board.getCell(x, 0).getState() == 0)
                     {
                         //check if piece falls and set state
-                        checkFall(x, y, clickedButton);
+                        checkFall(x, 0, clickedButton);
+                    }
+                    else
+                    {
+                        return;
                     }
                 }
             }
@@ -89,8 +95,7 @@ namespace CIS153_FinalGroupProject_Group6
             //player 1 turn
             if (playerTurn == 1)
             {
-                //set color
-                fallButton.BackColor = Color.Red;
+
                 //set state to full/red (1)
                 board.getCell(xCord, yCord).setState(1);
                 //check for win
@@ -98,13 +103,13 @@ namespace CIS153_FinalGroupProject_Group6
 
                 //change turn
                 playerTurn = 2;
+                lbl_turn.Text = "Player 2's Turn";
                 turnsTaken++;
             }
             //player 2 or AI turn
             else
             {
-                //set color
-                fallButton.BackColor = Color.Yellow;
+
                 //set state to full/yellow (2)
                 board.getCell(xCord, yCord).setState(2);
                 //check for win
@@ -112,6 +117,7 @@ namespace CIS153_FinalGroupProject_Group6
 
                 //change turn
                 playerTurn = 1;
+                lbl_turn.Text = "Player 1's Turn";
                 turnsTaken++;
             }
             //showing state 1 is red, 2 is yellow, 0 is empty
@@ -336,8 +342,11 @@ namespace CIS153_FinalGroupProject_Group6
 
                 if (win)
                 {
-                    //win condition goes here
+                    playerwin = 1;
                     Console.WriteLine("Player 1 wins!");
+                    form_gameOver go = new form_gameOver(playerwin, this);
+                    go.Show();
+                    this.Hide();
                 }
             }
 
@@ -543,8 +552,11 @@ namespace CIS153_FinalGroupProject_Group6
 
                 if (win)
                 {
-                    //win condition goes here
+                    playerwin = 2;
                     Console.WriteLine("Player 2 wins!");
+                    form_gameOver go = new form_gameOver(playerwin, this);
+                    go.Show();
+                    this.Hide();
                 }
 
             }
@@ -556,7 +568,7 @@ namespace CIS153_FinalGroupProject_Group6
             if(!win)
             {
                 Button hoveredButton = sender as Button;
-                if (hoveredButton != null)
+                if (hoveredButton != null && hoveredButton.BackColor != Color.Red && hoveredButton.BackColor != Color.Yellow)
                 {
                     if (playerTurn == 1)
                     {
@@ -573,13 +585,47 @@ namespace CIS153_FinalGroupProject_Group6
 
         private void mouseLeave(object sender, EventArgs e)
         {
-            Button hoveredButton = sender as Button;
-            if (hoveredButton != null)
+            setColors();
+        }
+
+        private void setColors()
+        {
+            //cycles through cells
+            for (int i = 0; i < 7; i++)
             {
-                hoveredButton.BackColor = SystemColors.Control;
+                for (int j = 0; j < 6; j++)
+                {
+                    //finds name of cells
+                    string tempName = "btn_" + i.ToString() + j.ToString();
+                    //finds the button with the corresponding cell name
+                    Button tempButton = this.Controls.Find(tempName, true).FirstOrDefault() as Button;
+                    //sets the button to the correct color depending on the stored state
+                    if (board.getCell(i, j).getState() == 1)
+                    {
+                        tempButton.BackColor = Color.Red;
+                    }
+                    else if (board.getCell(i, j).getState() == 2)
+                    {
+                        tempButton.BackColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        tempButton.BackColor = Color.FloralWhite;
+                    }
+                }
+            }
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms.Cast<Form>().ToArray())
+            {
+                form.Close();
             }
         }
     }
+
+
 
 
 }
