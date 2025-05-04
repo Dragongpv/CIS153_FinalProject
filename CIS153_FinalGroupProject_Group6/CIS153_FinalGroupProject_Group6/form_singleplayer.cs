@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace CIS153_FinalGroupProject_Group6
         Board board = new Board();
         bool win = false;
         int playerwin = 0; //keeps track of which player won
+        int aiChoice;
 
         public form_singleplayer()
         {
@@ -30,6 +32,7 @@ namespace CIS153_FinalGroupProject_Group6
        {
             if (!win)
             {
+               
                 setColors();
                 //store the sender (button that was clicked) as clicked button
                 Button clickedButton = sender as Button;
@@ -47,10 +50,14 @@ namespace CIS153_FinalGroupProject_Group6
                     //Console.WriteLine(y);
 
                     //check that cell is empty at position
-                    if (board.getCell(x, y).getState() == 0)
+                    if (board.getCell(x, 0).getState() == 0)
                     {
                         //check if piece falls and set state
-                        checkFall(x, y, clickedButton);
+                        checkFall(x, 0, clickedButton);
+                    }
+                    else
+                    {
+                        return;
                     }
 
                     if (!win)
@@ -122,8 +129,8 @@ namespace CIS153_FinalGroupProject_Group6
 
         private void aiLogic()
         {
-            //variable used to chose the x value of the spot to be played
-            int aiChoice;
+
+            
             //this is the logic for where it will play on the starting turn
             if (turnsTaken == 1)
             {
@@ -141,6 +148,10 @@ namespace CIS153_FinalGroupProject_Group6
             {
                 //sets variable in this scope
                 aiChoice = 3;
+
+                checkBlock();
+                checkCanWin();
+                
                 //if the top cell is filled it plays the cell to the right
                 while (board.getCell(aiChoice, 0).getState() != 0)
                 {
@@ -161,8 +172,413 @@ namespace CIS153_FinalGroupProject_Group6
             
         }
 
+        private void checkBlock()
+        {
+            int inARow = 0;
+            int tempX;
+            int tempY;
+            for (int i = 0; i < 7; i++)
+            {
+                for (int j = 0; j < 6; j++)
+                {
+                    tempX = i;
+                    tempY = j;
+                    //up
+                    inARow = 0;
+                    if (tempY > 4)
+                    {
+                        if (board.getCell(tempX, tempY).getState() == 1)
+                        {
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(tempX, yi).getState() == 1)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(tempX, yi - 1).getState() == 0)
+                                {
+                                    aiChoice = tempX;
+                                }
+                                yi--;
+                            }
+
+                        }
+                    }
+
+                    //cant block underneath so dont need a down
+
+                    //left
+                    if (tempX > 2)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 1)
+                        {
+                            int xi = tempX;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, tempY).getState() == 1)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi - 1, tempY).getState() == 0)
+                                {
+                                        aiChoice = tempX - 3;
+                                }
+                                xi--;
+                            }
+
+                        }
+                    }
+
+                    //right
+                    if (tempX < 4)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 1)
+                        {
+                            int xi = tempX;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, tempY).getState() == 1)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi + 1, tempY).getState() == 0)
+                                {
+                                        aiChoice = tempX + 3;
+                                }
+                                xi++;
+                            }
+
+                        }
+                    }
+
+                    //right-down
+                    if (tempX < 4 && tempY < 3)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 1)
+                        {
+                            int xi = tempX;
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, yi).getState() == 1)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi + 1, yi + 1).getState() == 0)
+                                {
+                                        aiChoice = tempX + 3;
+                                }
+                                xi++;
+                                yi++;
+                            }
+
+                        }
+                    }
+
+                    //right-up
+                    if (tempX < 4 && tempY > 4)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 1)
+                        {
+                            int xi = tempX;
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, yi).getState() == 1)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi + 1, yi - 1).getState() == 0)
+                                {
+                                    aiChoice = tempX + 3;
+                                }
+                                xi++;
+                                yi--;
+                            }
+
+                        }
+                    }
+
+                    //left-down
+                    if (tempX > 2 && tempY < 3)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 1)
+                        {
+                            int xi = tempX;
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, yi).getState() == 1)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi - 1, yi + 1).getState() == 0)
+                                {
+                                    aiChoice = tempX - 3;
+                                }
+                                xi--;
+                                yi++;
+                            }
+
+                        }
+                    }
+
+
+                    //left-up
+                    if (tempX > 2 && tempY > 4)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 1)
+                        {
+                            int xi = tempX;
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, yi).getState() == 1)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi - 1, yi - 1).getState() == 0)
+                                {
+                                    aiChoice = tempX - 3;
+                                }
+                                xi--;
+                                yi--;
+                            }
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        private void checkCanWin()
+        {
+            int inARow = 0;
+            int tempX;
+            int tempY;
+            for (int i = 0; i < 7; i++)
+            {
+                for (int j = 0; j < 6; j++)
+                {
+                    tempX = i;
+                    tempY = j;
+                    //up
+                    inARow = 0;
+                    if (tempY > 4)
+                    {
+                        if (board.getCell(tempX, tempY).getState() == 2)
+                        {
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(tempX, yi).getState() == 2)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(tempX, yi - 1).getState() == 0)
+                                {
+                                    aiChoice = tempX;
+                                }
+                                yi--;
+                            }
+
+                        }
+                    }
+
+                    //cant block underneath so dont need a down
+
+                    //left
+                    if (tempX > 2)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 2)
+                        {
+                            int xi = tempX;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, tempY).getState() == 2)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi - 1, tempY).getState() == 0)
+                                {
+                                    aiChoice = tempX - 3;
+                                }
+                                xi--;
+                            }
+
+                        }
+                    }
+
+                    //right
+                    if (tempX < 4)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 2)
+                        {
+                            int xi = tempX;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, tempY).getState() == 2)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi + 1, tempY).getState() == 0)
+                                {
+                                    aiChoice = tempX + 3;
+                                }
+                                xi++;
+                            }
+
+                        }
+                    }
+
+                    //right-down
+                    if (tempX < 4 && tempY < 3)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 2)
+                        {
+                            int xi = tempX;
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, yi).getState() == 2)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi + 1, yi + 1).getState() == 0)
+                                {
+                                    aiChoice = tempX + 3;
+                                }
+                                xi++;
+                                yi++;
+                            }
+
+                        }
+                    }
+
+                    //right-up
+                    if (tempX < 4 && tempY > 4)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 2)
+                        {
+                            int xi = tempX;
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, yi).getState() == 2)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi + 1, yi - 1).getState() == 0)
+                                {
+                                    aiChoice = tempX + 3;
+                                }
+                                xi++;
+                                yi--;
+                            }
+
+                        }
+                    }
+
+                    //left-down
+                    if (tempX > 2 && tempY < 3)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 2)
+                        {
+                            int xi = tempX;
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, yi).getState() == 2)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi - 1, yi + 1).getState() == 0)
+                                {
+                                    aiChoice = tempX - 3;
+                                }
+                                xi--;
+                                yi++;
+                            }
+
+                        }
+                    }
+
+
+                    //left-up
+                    if (tempX > 2 && tempY > 4)
+                    {
+                        inARow = 0;
+                        if (board.getCell(tempX, tempY).getState() == 2)
+                        {
+                            int xi = tempX;
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
+
+                                if (board.getCell(xi, yi).getState() == 2)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(xi - 1, yi - 1).getState() == 0)
+                                {
+                                    aiChoice = tempX - 3;
+                                }
+                                xi--;
+                                yi--;
+                            }
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
         private void checkFall(int xCord, int yCord, Button clickedButton)
         {
+
             //check if space below is empty, fall to bottom most space
 
             //loop thru going down, until y is 5 (lowest cell)
@@ -205,7 +621,7 @@ namespace CIS153_FinalGroupProject_Group6
                 //set color
                 //fallButton.BackColor = Color.Yellow;
                 //set state to full/yellow (2)
-                board.getCell(xCord, yCord).setState(2);
+                board.getCell(xCord, 0).setState(2);
                 //check for win
                 checkWin(xCord, yCord);
 

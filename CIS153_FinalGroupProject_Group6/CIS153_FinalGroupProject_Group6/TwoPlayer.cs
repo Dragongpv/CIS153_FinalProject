@@ -55,10 +55,14 @@ namespace CIS153_FinalGroupProject_Group6
                     //Console.WriteLine(y);
 
                     //check that cell is empty at position
-                    if (board.getCell(x, y).getState() == 0)
+                    if (board.getCell(x, 0).getState() == 0)
                     {
                         //check if piece falls and set state
-                        checkFall(x, y, clickedButton);
+                        checkFall(x, 0, clickedButton);
+                    }
+                    else
+                    {
+                        return;
                     }
                 }
             }
