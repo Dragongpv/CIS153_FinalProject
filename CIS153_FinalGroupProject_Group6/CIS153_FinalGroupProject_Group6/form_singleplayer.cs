@@ -624,30 +624,7 @@ namespace CIS153_FinalGroupProject_Group6
                 {
                     tempX = i;
                     tempY = j;
-                    //up
-                    inARow = 0;
-                    if (tempY > 4)
-                    {
-                        if (board.getCell(tempX, tempY).getState() == 1)
-                        {
-                            int yi = tempY;
-                            for (int z = 0; z < 3; z++)
-                            {
-
-                                if (board.getCell(tempX, yi).getState() == 1)
-                                {
-
-                                    inARow++;
-                                }
-                                if (inARow == 3 && board.getCell(tempX, yi - 1).getState() == 0)
-                                {
-                                    aiChoice = tempX;
-                                }
-                                yi--;
-                            }
-
-                        }
-                    }
+                    
 
                     //cant block underneath so dont need a down
 
@@ -810,7 +787,30 @@ namespace CIS153_FinalGroupProject_Group6
                         }
                     }
 
+                    //up
+                    inARow = 0;
+                    if (tempY > 4)
+                    {
+                        if (board.getCell(tempX, tempY).getState() == 1)
+                        {
+                            int yi = tempY;
+                            for (int z = 0; z < 3; z++)
+                            {
 
+                                if (board.getCell(tempX, yi).getState() == 1)
+                                {
+
+                                    inARow++;
+                                }
+                                if (inARow == 3 && board.getCell(tempX, yi - 1).getState() == 0)
+                                {
+                                    aiChoice = tempX;
+                                }
+                                yi--;
+                            }
+
+                        }
+                    }
                 }
             }
         }
