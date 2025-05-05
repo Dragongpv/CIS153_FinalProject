@@ -9,17 +9,18 @@ namespace CIS153_FinalGroupProject_Group6
 {
     internal class Stats
     {
-        public int playerWins;
-        public int AiWins;
-        public int Ties;
+        public int playerWins = 0;
+        public int AiWins = 0;
+        public int Ties = 0;
 
         //total games
         public int totalGames => playerWins + AiWins + Ties;
 
 
         // win percentages
-        public double playerWinpercentage => playerWins / totalGames;
-        public double AiWinpercentage => AiWins / totalGames;
+        public double playerWinpercentage => Math.Round((double)playerWins / totalGames * 100);
+
+        public double AiWinpercentage => Math.Round((double)AiWins / totalGames * 100);
 
 
 
@@ -72,7 +73,7 @@ namespace CIS153_FinalGroupProject_Group6
             Stats tempStats = new Stats();
 
             //Path to the text file
-            string filePath = "../../stats.cs/stats.txt";
+            string filePath = "Stats.txt";
 
             // If the file doesn't exist, return an empty stats object
             if (!File.Exists(filePath))
@@ -101,6 +102,9 @@ namespace CIS153_FinalGroupProject_Group6
                         tempStats.Ties = int.Parse(parts[2]);
                     }
                 }
+
+
+                file.Close();
             }
 
             //Return the loaded stats
@@ -111,15 +115,16 @@ namespace CIS153_FinalGroupProject_Group6
         public void SaveStats()
         {
             // Path to the text file
-            string filePath = "../../stats.cs/stats.txt";
+            string filePath = "Stats.txt";
 
             // Format the data as a single line like "3,5,2"
             string line = $"{playerWins},{AiWins},{Ties}";
 
             // Write the line to the file (this will overwrite existing contents)
             File.WriteAllText(filePath, line);
+            
         }
     }
 
 }
-}
+

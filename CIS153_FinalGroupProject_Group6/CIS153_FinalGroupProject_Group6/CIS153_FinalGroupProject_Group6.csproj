@@ -87,6 +87,9 @@
     <EmbeddedResource Include="form_singleplayer.resx">
       <DependentUpon>form_singleplayer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form_stats.resx">
+      <DependentUpon>form_stats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>

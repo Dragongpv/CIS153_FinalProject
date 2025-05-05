@@ -23,22 +23,28 @@ namespace CIS153_FinalGroupProject_Group6
 
             //writing of win to stat file can happen here as this form will happen regardless of single or two player
             //just put it in the correspodning if statement
-
+            Stats stats = Stats.LoadStats();
             //add to total plays
             //add to wins for player 1 or 2
             //add to ties if applicable
             if (playerwin == 1)
             {
                 lbl_winner.Text = "Player 1 Wins!";
+                stats.playerWins++;
+                
             }
             else if (playerwin == 2)
             {
                 lbl_winner.Text = "Player 2 Wins!";
+                stats.AiWins++;
             }
             else
             {
                 lbl_winner.Text = "It's a tie!";
+                stats.Ties++;
             }
+
+            stats.SaveStats();
 
             //showing record against ai can also be read from this form as this is where it would show anyway 
             //show win percentage 
@@ -70,6 +76,11 @@ namespace CIS153_FinalGroupProject_Group6
             {
                 form.Close();
             }
+        }
+
+        private void form_gameOver_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

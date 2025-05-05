@@ -92,6 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Yellow;
             this.ClientSize = new System.Drawing.Size(950, 467);
             this.Controls.Add(this.btn_EXIT);
             this.Controls.Add(this.btn_twoPlayer);
@@ -100,6 +101,7 @@
             this.Controls.Add(this.lbl_winner);
             this.Name = "form_gameOver";
             this.Text = "form_gameOver";
+            this.Load += new System.EventHandler(this.form_gameOver_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

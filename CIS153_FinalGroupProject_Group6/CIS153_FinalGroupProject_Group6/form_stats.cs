@@ -19,10 +19,22 @@ namespace CIS153_FinalGroupProject_Group6
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-        }
-        public void readfile()
-        {
-           
+            Stats stats = Stats.LoadStats();
+
+
+            lbl_pWIns.Text = $"Player Wins : {stats.playerWins}";
+            lbl__aiwins.Text = $"AI Wins: {stats.AiWins}";
+            lbl_ties.Text = $"Ties : {stats.Ties}";
+            lbl_total.Text = $"Total Games: {stats.totalGames}";
+            lbl_playerpct.Text = $"Player Win %: {stats.playerWinpercentage}";
+            
+            lbl_aipct.Text = $"Ai Win % : {stats.AiWinpercentage}";
+
+
+
+
+
+
 
         }
     }
