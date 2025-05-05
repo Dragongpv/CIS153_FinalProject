@@ -1,61 +1,61 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\",
+  "WorkspaceRootPath": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|c:\\users\\brett\\onedrive\\documents\\github\\cis153_finalproject\\cis153_finalgroupproject_group6\\cis153_finalgroupproject_group6\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\form_stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|c:\\users\\brett\\onedrive\\documents\\github\\cis153_finalproject\\cis153_finalgroupproject_group6\\cis153_finalgroupproject_group6\\stats.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\stats.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\form_stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|c:\\users\\brett\\onedrive\\documents\\github\\cis153_finalproject\\cis153_finalgroupproject_group6\\cis153_finalgroupproject_group6\\form_singleplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_singleplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\form_singleplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_singleplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\form_singleplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\form_stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\form_stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|c:\\users\\grang\\onedrive\\documents\\github\\cis153_finalproject\\cis153_finalgroupproject_group6\\cis153_finalgroupproject_group6\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\stats.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\stats.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\form_gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\twoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_singleplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\form_singleplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\cis153_finalgroupproject_group6\\form_gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{06B05A53-4028-4198-890E-40B389B6E6DF}|CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6.csproj|solutionrelative:cis153_finalgroupproject_group6\\form_gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -66,28 +66,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Stats.cs",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Stats.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Stats.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\Stats.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Stats.cs",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Stats.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\Stats.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAgwEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-04T23:13:14.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Stats.txt",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Stats.txt",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Stats.txt",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\Stats.txt",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Stats.txt",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Stats.txt",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\Stats.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
@@ -96,24 +96,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "form_stats.cs",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_stats.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_stats.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\form_stats.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_stats.cs",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_stats.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\form_stats.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAABgAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwBgAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T01:56:45.329Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "form_stats.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_stats.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_stats.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\form_stats.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_stats.cs [Design]",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_stats.cs [Design]",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\form_stats.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T02:04:07.299Z",
@@ -121,49 +121,47 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "TwoPlayer.cs",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
-              "ViewState": "AgIAAA0BAAAAAAAAAAAAAD4AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAwIcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T20:50:00.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "MainMenu.cs",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\MainMenu.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\MainMenu.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\MainMenu.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\MainMenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T20:44:38.609Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T20:44:38.609Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "MainMenu.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\MainMenu.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\MainMenu.cs",
               "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\MainMenu.cs [Design]",
-              "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\MainMenu.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\MainMenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T20:41:42.378Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-09T20:41:42.378Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "TwoPlayer.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\TwoPlayer.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs [Design]",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\TwoPlayer.cs [Design]",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\TwoPlayer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T20:40:47.511Z",
@@ -171,11 +169,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Board.cs",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Board.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Board.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\Board.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Board.cs",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Board.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\Board.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -183,37 +181,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Cell.cs",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Cell.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Cell.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\Cell.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Cell.cs",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\Cell.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\Cell.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T20:50:27.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T20:50:27.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "form_singleplayer.cs",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_singleplayer.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_singleplayer.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\form_singleplayer.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_singleplayer.cs",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_singleplayer.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\form_singleplayer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEDAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAEEAAAAAAAAAAAUwBsEAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T01:56:19.658Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "form_singleplayer.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_singleplayer.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_singleplayer.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\form_singleplayer.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_singleplayer.cs [Design]",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_singleplayer.cs [Design]",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\form_singleplayer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T01:52:10.719Z",
@@ -221,26 +218,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "form_gameOver.cs",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_gameOver.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_gameOver.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\form_gameOver.cs",
-              "ToolTip": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_gameOver.cs",
+              "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_gameOver.cs",
               "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\form_gameOver.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAswCsAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwCsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T01:59:30.481Z"
+              "WhenOpened": "2025-05-03T01:59:30.481Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "form_gameOver.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\brett\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_gameOver.cs",
+              "DocumentMoniker": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_gameOver.cs",
               "RelativeDocumentMoniker": "CIS153_FinalGroupProject_Group6\\form_gameOver.cs",
               "ToolTip": "C:\\Users\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_gameOver.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\grang\\OneDrive\\Documents\\GitHub\\CIS153_FinalProject\\CIS153_FinalGroupProject_Group6\\CIS153_FinalGroupProject_Group6\\form_gameOver.cs [Design]",
+              "RelativeToolTip": "CIS153_FinalGroupProject_Group6\\form_gameOver.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T01:58:15.719Z"
+              "WhenOpened": "2025-05-03T01:58:15.719Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

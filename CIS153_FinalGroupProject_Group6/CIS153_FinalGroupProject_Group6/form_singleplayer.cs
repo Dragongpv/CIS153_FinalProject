@@ -108,7 +108,9 @@ namespace CIS153_FinalGroupProject_Group6
                 //set state to full/yellow (2)
                 board.getCell(xCord, yCord).setState(2);
                 //check for win
-                checkWin(xCord, yCord);
+                //checkWin(xCord, yCord);
+
+                newCheckWinP2(xCord, yCord);
 
                 //change turn
                 playerTurn = 1;
@@ -125,7 +127,446 @@ namespace CIS153_FinalGroupProject_Group6
                 //this is where the game over scenario will go 
                 Console.WriteLine("Game Over");
             }
+
+
         }
+
+        private void newCheckWinP2(int xCord, int yCord)
+        {
+
+            int inARow = 0;
+            int tempX;
+            int tempY;
+            if (playerTurn == 2)
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    if (win)
+                    {
+                        break;
+                    }
+                    for (int j = 0; j < 6; j++)
+                    {
+                        tempX = i;
+                        tempY = j;
+                        //down
+                        inARow = 0;
+                        if (tempY < 3)
+                        {
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int yi = tempY;
+
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(tempX, yi).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    //&& board.getCell(tempX, yi - 1).getState() == 0
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+                        //left
+                        if (tempX > 2)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, tempY).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                }
+
+                            }
+                        }
+
+                        ////right
+                        if (tempX < 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                for (int z = 0; z < 3; z++)
+                                {
+
+                                    if (board.getCell(xi, tempY).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                }
+
+                            }
+                        }
+
+                        //right-down
+                        if (tempX < 4 && tempY < 3)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+                        //right-up
+                        if (tempX < 4 && tempY > 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                    yi--;
+                                }
+
+                            }
+                        }
+
+                        //left-down
+                        if (tempX > 2 && tempY < 3)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+
+                        //left-up
+                        if (tempX > 2 && tempY > 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                    yi--;
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+            }
+            if (win)
+            {
+                playerwin = 2;
+                Console.WriteLine("Player 2 wins!");
+                form_gameOver go = new form_gameOver(playerwin, this);
+                go.Show();
+                this.Hide();
+            }
+
+        }
+
+        private void newCheckWinP1(int xCord, int yCord)
+        {
+
+            int inARow = 0;
+            int tempX;
+            int tempY;
+            if (playerTurn == 1)
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    if (win)
+                    {
+                        break;
+                    }
+                    for (int j = 0; j < 6; j++)
+                    {
+                        tempX = i;
+                        tempY = j;
+                        //down
+                        inARow = 0;
+                        if (tempY < 3)
+                        {
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int yi = tempY;
+
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(tempX, yi).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    //&& board.getCell(tempX, yi - 1).getState() == 0
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+                        //left
+                        if (tempX > 2)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, tempY).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                }
+
+                            }
+                        }
+
+                        ////right
+                        if (tempX < 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                for (int z = 0; z < 3; z++)
+                                {
+
+                                    if (board.getCell(xi, tempY).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                }
+
+                            }
+                        }
+
+                        //right-down
+                        if (tempX < 4 && tempY < 3)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+                        //right-up
+                        if (tempX < 4 && tempY > 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                    yi--;
+                                }
+
+                            }
+                        }
+
+                        //left-down
+                        if (tempX > 2 && tempY < 3)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+
+                        //left-up
+                        if (tempX > 2 && tempY > 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                    yi--;
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+            }
+            if (win)
+            {
+                playerwin = 1;
+                Console.WriteLine("Player 1 wins!");
+                form_gameOver go = new form_gameOver(playerwin, this);
+                go.Show();
+                this.Hide();
+            }
+
+        }
+
 
         private void aiLogic()
         {
@@ -609,7 +1050,7 @@ namespace CIS153_FinalGroupProject_Group6
                 //set state to full/red (1)
                 board.getCell(xCord, yCord).setState(1);
                 //check for win
-                checkWin(xCord, yCord);
+                newCheckWinP1(xCord, yCord);
 
                 //change turn
                 playerTurn = 2;

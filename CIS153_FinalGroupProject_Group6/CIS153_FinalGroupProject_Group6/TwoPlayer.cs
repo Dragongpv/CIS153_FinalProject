@@ -99,7 +99,7 @@ namespace CIS153_FinalGroupProject_Group6
                 //set state to full/red (1)
                 board.getCell(xCord, yCord).setState(1);
                 //check for win
-                checkWin(xCord, yCord);
+                newCheckWinP1(xCord, yCord);
 
                 //change turn
                 playerTurn = 2;
@@ -113,7 +113,7 @@ namespace CIS153_FinalGroupProject_Group6
                 //set state to full/yellow (2)
                 board.getCell(xCord, yCord).setState(2);
                 //check for win
-                checkWin(xCord, yCord);
+                newCheckWinP2(xCord, yCord);
 
                 //change turn
                 playerTurn = 1;
@@ -133,435 +133,872 @@ namespace CIS153_FinalGroupProject_Group6
             }
         }
 
-
-        private void checkWin(int xCord, int yCord)
+        private void newCheckWinP1(int xCord, int yCord)
         {
-            //check if 4 in a row in all directions
-            //inRow will keep track of how many in a row
-            int inRow = 0;
 
-            //if turn is 1, check for red
+            int inARow = 0;
+            int tempX;
+            int tempY;
             if (playerTurn == 1)
             {
-                //left
-                inRow = 0;
-                for (int xi = xCord; xi >= 0; xi--)
+                for (int i = 0; i < 7; i++)
                 {
                     if (win)
                     {
                         break;
                     }
-                    Console.WriteLine("xi : " + xi);
-                    if (board.getCell(xi, yCord).getState() == 1)
+                    for (int j = 0; j < 6; j++)
                     {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yCord).getState() == 2 || board.getCell(xi, yCord).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row Left");
-                    }
-                }
+                        tempX = i;
+                        tempY = j;
+                        //down
+                        inARow = 0;
+                        if (tempY < 3)
+                        {
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int yi = tempY;
 
-                //right
-                inRow = 0;
-                for (int xi = xCord; xi <= 6; xi++)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi);
-                    if (board.getCell(xi, yCord).getState() == 1)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yCord).getState() == 2 || board.getCell(xi, yCord).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row Right");
-                    }
-                }
-                //up
-                //dont need a straight up
+                                for (int z = 0; z < 4; z++)
+                                {
 
-                //down
-                inRow = 0;
-                for (int yi = yCord; yi <= 5; yi++)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("yi : " + yi);
-                    if (board.getCell(xCord, yi).getState() == 1)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xCord, yi).getState() == 2 || board.getCell(xCord, yi).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row down");
-                    }
-                }
+                                    if (board.getCell(tempX, yi).getState() == 1)
+                                    {
 
-                //diangonal left up
-                inRow = 0;
-                for (int yi = yCord, xi = xCord; yi >= 0 && xi >= 0; yi--, xi--)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi + " yi : " + yi);
-                    if (board.getCell(xi, yi).getState() == 1)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yi).getState() == 2 || board.getCell(xi, yi).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row up and left");
-                    }
-                }
+                                        inARow++;
+                                    }
+                                    //&& board.getCell(tempX, yi - 1).getState() == 0
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    yi++;
+                                }
 
-                //diagonal right up
-                inRow = 0;
-                for (int yi = yCord, xi = xCord; yi >= 0 && xi <= 6; yi--, xi++)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi + " yi : " + yi);
-                    if (board.getCell(xi, yi).getState() == 1)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yi).getState() == 2 || board.getCell(xi, yi).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row up and right");
-                    }
-                }
+                            }
+                        }
 
-                //diagonal left down
-                inRow = 0;
-                for (int yi = yCord, xi = xCord; yi <= 5 && xi >= 0; yi++, xi--)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi + " yi : " + yi);
-                    if (board.getCell(xi, yi).getState() == 1)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yi).getState() == 2 || board.getCell(xi, yi).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row down and left");
-                    }
-                }
-                //diagonal right down
-                inRow = 0;
-                for (int yi = yCord, xi = xCord; yi <= 5 && xi <= 6; yi++, xi++)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi + " yi : " + yi);
-                    if (board.getCell(xi, yi).getState() == 1)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yi).getState() == 2 || board.getCell(xi, yi).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row up and right");
-                    }
-                }
+                        //left
+                        if (tempX > 2)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                for (int z = 0; z < 4; z++)
+                                {
 
-                if (win)
-                {
-                    playerwin = 1;
-                    Console.WriteLine("Player 1 wins!");
-                    form_gameOver go = new form_gameOver(playerwin, this);
-                    go.Show();
-                    this.Hide();
+                                    if (board.getCell(xi, tempY).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                }
+
+                            }
+                        }
+
+                        ////right
+                        if (tempX < 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                for (int z = 0; z < 3; z++)
+                                {
+
+                                    if (board.getCell(xi, tempY).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                }
+
+                            }
+                        }
+
+                        //right-down
+                        if (tempX < 4 && tempY < 3)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+                        //right-up
+                        if (tempX < 4 && tempY > 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                    yi--;
+                                }
+
+                            }
+                        }
+
+                        //left-down
+                        if (tempX > 2 && tempY < 3)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+
+                        //left-up
+                        if (tempX > 2 && tempY > 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 1)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 1)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                    yi--;
+                                }
+
+                            }
+                        }
+
+                    }
                 }
             }
-
-            //if it is player 2's turn
-            if(playerTurn == 2)
+            if (win)
             {
-                //left
-                inRow = 0;
-                for (int xi = xCord; xi >= 0; xi--)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi);
-                    if (board.getCell(xi, yCord).getState() == 2)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yCord).getState() == 1 || board.getCell(xi, yCord).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row Left");
-                    }
-                }
-
-                //right
-                inRow = 0;
-                for (int xi = xCord; xi <= 6; xi++)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi);
-                    if (board.getCell(xi, yCord).getState() == 2)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yCord).getState() == 1 || board.getCell(xi, yCord).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row Right");
-                    }
-                }
-                //up
-                //dont need a straight up
-
-                //down
-                inRow = 0;
-                for (int yi = yCord; yi <= 5; yi++)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("yi : " + yi);
-                    if (board.getCell(xCord, yi).getState() == 2)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xCord, yi).getState() == 1 || board.getCell(xCord, yi).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row down");
-                    }
-                }
-
-                //diangonal left up
-                inRow = 0;
-                for (int yi = yCord, xi = xCord; yi >= 0 && xi >= 0; yi--, xi--)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi + " yi : " + yi);
-                    if (board.getCell(xi, yi).getState() == 2)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yi).getState() == 1 || board.getCell(xi, yi).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row up and left");
-                    }
-                }
-
-                //diagonal right up
-                inRow = 0;
-                for (int yi = yCord, xi = xCord; yi >= 0 && xi <= 6; yi--, xi++)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi + " yi : " + yi);
-                    if (board.getCell(xi, yi).getState() == 2)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yi).getState() == 1 || board.getCell(xi, yi).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row up and right");
-                    }
-                }
-
-                //diagonal left down
-                inRow = 0;
-                for (int yi = yCord, xi = xCord; yi <= 5 && xi >= 0; yi++, xi--)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi + " yi : " + yi);
-                    if (board.getCell(xi, yi).getState() == 2)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yi).getState() == 1 || board.getCell(xi, yi).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row down and left");
-                    }
-                }
-                //diagonal right down
-                inRow = 0;
-                for (int yi = yCord, xi = xCord; yi <= 5 && xi <= 6; yi++, xi++)
-                {
-                    if (win)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("xi : " + xi + " yi : " + yi);
-                    if (board.getCell(xi, yi).getState() == 2)
-                    {
-                        //if state is same color add to inRow
-                        inRow++;
-                        Console.WriteLine("inRow : " + inRow);
-                    }
-                    else if (board.getCell(xi, yi).getState() == 1 || board.getCell(xi, yi).getState() == 0)
-                    {
-                        //if state is not same color or empty
-                        break;
-                    }
-                    if (inRow == 4)
-                    {
-                        //set win to true
-                        win = true;
-                        Console.WriteLine("4 in a row up and right");
-                    }
-                }
-
-                if (win)
-                {
-                    playerwin = 2;
-                    Console.WriteLine("Player 2 wins!");
-                    form_gameOver go = new form_gameOver(playerwin, this);
-                    go.Show();
-                    this.Hide();
-                }
-
+                playerwin = 1;
+                Console.WriteLine("Player 1 wins!");
+                form_gameOver go = new form_gameOver(playerwin, this);
+                go.Show();
+                this.Hide();
             }
-            
+
         }
+
+
+        private void newCheckWinP2(int xCord, int yCord)
+        {
+
+            int inARow = 0;
+            int tempX;
+            int tempY;
+            if (playerTurn == 2)
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    if (win)
+                    {
+                        break;
+                    }
+                    for (int j = 0; j < 6; j++)
+                    {
+                        tempX = i;
+                        tempY = j;
+                        //down
+                        inARow = 0;
+                        if (tempY < 3)
+                        {
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int yi = tempY;
+
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(tempX, yi).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    //&& board.getCell(tempX, yi - 1).getState() == 0
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+                        //left
+                        if (tempX > 2)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, tempY).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                }
+
+                            }
+                        }
+
+                        ////right
+                        if (tempX < 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                for (int z = 0; z < 3; z++)
+                                {
+
+                                    if (board.getCell(xi, tempY).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                }
+
+                            }
+                        }
+
+                        //right-down
+                        if (tempX < 4 && tempY < 3)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+                        //right-up
+                        if (tempX < 4 && tempY > 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi++;
+                                    yi--;
+                                }
+
+                            }
+                        }
+
+                        //left-down
+                        if (tempX > 2 && tempY < 3)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                    yi++;
+                                }
+
+                            }
+                        }
+
+
+                        //left-up
+                        if (tempX > 2 && tempY > 4)
+                        {
+                            inARow = 0;
+                            if (board.getCell(tempX, tempY).getState() == 2)
+                            {
+                                int xi = tempX;
+                                int yi = tempY;
+                                for (int z = 0; z < 4; z++)
+                                {
+
+                                    if (board.getCell(xi, yi).getState() == 2)
+                                    {
+
+                                        inARow++;
+                                    }
+                                    if (inARow == 4)
+                                    {
+                                        win = true;
+                                    }
+                                    xi--;
+                                    yi--;
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+            }
+            if (win)
+            {
+                playerwin = 2;
+                Console.WriteLine("Player 2 wins!");
+                form_gameOver go = new form_gameOver(playerwin, this);
+                go.Show();
+                this.Hide();
+            }
+
+        }
+
+
+        //private void checkWin(int xCord, int yCord)
+        //{
+        //    //check if 4 in a row in all directions
+        //    //inRow will keep track of how many in a row
+        //    int inRow = 0;
+
+        //    //if turn is 1, check for red
+        //    if (playerTurn == 1)
+        //    {
+        //        //left
+        //        inRow = 0;
+        //        for (int xi = xCord; xi >= 0; xi--)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi);
+        //            if (board.getCell(xi, yCord).getState() == 1)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yCord).getState() == 2 || board.getCell(xi, yCord).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row Left");
+        //            }
+        //        }
+
+        //        //right
+        //        inRow = 0;
+        //        for (int xi = xCord; xi <= 6; xi++)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi);
+        //            if (board.getCell(xi, yCord).getState() == 1)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yCord).getState() == 2 || board.getCell(xi, yCord).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row Right");
+        //            }
+        //        }
+        //        //up
+        //        //dont need a straight up
+
+        //        //down
+        //        inRow = 0;
+        //        for (int yi = yCord; yi <= 5; yi++)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("yi : " + yi);
+        //            if (board.getCell(xCord, yi).getState() == 1)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xCord, yi).getState() == 2 || board.getCell(xCord, yi).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row down");
+        //            }
+        //        }
+
+        //        //diangonal left up
+        //        inRow = 0;
+        //        for (int yi = yCord, xi = xCord; yi >= 0 && xi >= 0; yi--, xi--)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi + " yi : " + yi);
+        //            if (board.getCell(xi, yi).getState() == 1)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yi).getState() == 2 || board.getCell(xi, yi).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row up and left");
+        //            }
+        //        }
+
+        //        //diagonal right up
+        //        inRow = 0;
+        //        for (int yi = yCord, xi = xCord; yi >= 0 && xi <= 6; yi--, xi++)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi + " yi : " + yi);
+        //            if (board.getCell(xi, yi).getState() == 1)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yi).getState() == 2 || board.getCell(xi, yi).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row up and right");
+        //            }
+        //        }
+
+        //        //diagonal left down
+        //        inRow = 0;
+        //        for (int yi = yCord, xi = xCord; yi <= 5 && xi >= 0; yi++, xi--)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi + " yi : " + yi);
+        //            if (board.getCell(xi, yi).getState() == 1)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yi).getState() == 2 || board.getCell(xi, yi).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row down and left");
+        //            }
+        //        }
+        //        //diagonal right down
+        //        inRow = 0;
+        //        for (int yi = yCord, xi = xCord; yi <= 5 && xi <= 6; yi++, xi++)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi + " yi : " + yi);
+        //            if (board.getCell(xi, yi).getState() == 1)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yi).getState() == 2 || board.getCell(xi, yi).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row up and right");
+        //            }
+        //        }
+
+        //        if (win)
+        //        {
+        //            playerwin = 1;
+        //            Console.WriteLine("Player 1 wins!");
+        //            form_gameOver go = new form_gameOver(playerwin, this);
+        //            go.Show();
+        //            this.Hide();
+        //        }
+        //    }
+
+        //    //if it is player 2's turn
+        //    if(playerTurn == 2)
+        //    {
+        //        //left
+        //        inRow = 0;
+        //        for (int xi = xCord; xi >= 0; xi--)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi);
+        //            if (board.getCell(xi, yCord).getState() == 2)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yCord).getState() == 1 || board.getCell(xi, yCord).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row Left");
+        //            }
+        //        }
+
+        //        //right
+        //        inRow = 0;
+        //        for (int xi = xCord; xi <= 6; xi++)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi);
+        //            if (board.getCell(xi, yCord).getState() == 2)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yCord).getState() == 1 || board.getCell(xi, yCord).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row Right");
+        //            }
+        //        }
+        //        //up
+        //        //dont need a straight up
+
+        //        //down
+        //        inRow = 0;
+        //        for (int yi = yCord; yi <= 5; yi++)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("yi : " + yi);
+        //            if (board.getCell(xCord, yi).getState() == 2)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xCord, yi).getState() == 1 || board.getCell(xCord, yi).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row down");
+        //            }
+        //        }
+
+        //        //diangonal left up
+        //        inRow = 0;
+        //        for (int yi = yCord, xi = xCord; yi >= 0 && xi >= 0; yi--, xi--)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi + " yi : " + yi);
+        //            if (board.getCell(xi, yi).getState() == 2)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yi).getState() == 1 || board.getCell(xi, yi).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row up and left");
+        //            }
+        //        }
+
+        //        //diagonal right up
+        //        inRow = 0;
+        //        for (int yi = yCord, xi = xCord; yi >= 0 && xi <= 6; yi--, xi++)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi + " yi : " + yi);
+        //            if (board.getCell(xi, yi).getState() == 2)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yi).getState() == 1 || board.getCell(xi, yi).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row up and right");
+        //            }
+        //        }
+
+        //        //diagonal left down
+        //        inRow = 0;
+        //        for (int yi = yCord, xi = xCord; yi <= 5 && xi >= 0; yi++, xi--)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi + " yi : " + yi);
+        //            if (board.getCell(xi, yi).getState() == 2)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yi).getState() == 1 || board.getCell(xi, yi).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row down and left");
+        //            }
+        //        }
+        //        //diagonal right down
+        //        inRow = 0;
+        //        for (int yi = yCord, xi = xCord; yi <= 5 && xi <= 6; yi++, xi++)
+        //        {
+        //            if (win)
+        //            {
+        //                break;
+        //            }
+        //            Console.WriteLine("xi : " + xi + " yi : " + yi);
+        //            if (board.getCell(xi, yi).getState() == 2)
+        //            {
+        //                //if state is same color add to inRow
+        //                inRow++;
+        //                Console.WriteLine("inRow : " + inRow);
+        //            }
+        //            else if (board.getCell(xi, yi).getState() == 1 || board.getCell(xi, yi).getState() == 0)
+        //            {
+        //                //if state is not same color or empty
+        //                break;
+        //            }
+        //            if (inRow == 4)
+        //            {
+        //                //set win to true
+        //                win = true;
+        //                Console.WriteLine("4 in a row up and right");
+        //            }
+        //        }
+
+        //        if (win)
+        //        {
+        //            playerwin = 2;
+        //            Console.WriteLine("Player 2 wins!");
+        //            form_gameOver go = new form_gameOver(playerwin, this);
+        //            go.Show();
+        //            this.Hide();
+        //        }
+
+        //    }
+            
+        //}
 
         private void mouseHover(object sender, EventArgs e)
         {
